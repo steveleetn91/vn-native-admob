@@ -1,9 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<plugin xmlns:android="http://schemas.android.com/apk/res/android" id="vn-native-admob"
+<plugin xmlns:android="http://schemas.android.com/apk/res/android" id="cordova-plugin-admob-free"
     version="0.27.0" xmlns="http://apache.org/cordova/ns/plugins/1.0">
-    <name>Vn Native Admob</name>
-    <description> Vn Native Admob Module , this module reused from https://github.com/ratson/cordova-plugin-admob-free.git 
+    <name>Cordova AdMob Plugin</name>
+    <description>Robust, reliable and easy to use Cordova Admob plugin for Android and iOS
+        phone. Allows preloading and automatic loading of interstitials and banners plus more.
     </description>
+    <author>Ratson</author>
+    <license>MIT</license>
+    <keywords>admob, google, cordova-ios, cordova-android, ecosystem:cordova, android, ios,
+        money, monetization, iad, services, play, earn, publicity, advertisment, advertising,
+        ads, ad, eclipse, android studio
+    </keywords>
+    <repo>https://github.com/ratson/cordova-plugin-admob-free.git</repo>
+    <issue>https://github.com/ratson/cordova-plugin-admob-free/issues</issue>
+
     <engines>
         <engine name="cordova" version=">=4.0" />
     </engines>
