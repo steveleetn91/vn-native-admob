@@ -21,14 +21,12 @@
     "lint:spaces": "lintspaces -n -t -d spaces *.* src/**/*.* tests/**/*.* examples/*/*.* examples/*/www/*.*"
   },
   "cordova": {
-    "id": "cordova-plugin-admob-free",
+    "id": "vn-native-admob",
     "platforms": [
       "android",
       "ios"
     ]
   },
-  "homepage": "https://ratson.github.io/cordova-plugin-admob-free/",
-  "repository": "ratson/cordova-plugin-admob-free",
   "keywords": [
     "cordova",
     "admob",
