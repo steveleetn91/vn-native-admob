@@ -7,7 +7,7 @@ let vnnative = {
     },
     banner : function(){
         exec(callback, (err) => {
-            callback(err);
+            callback(err); 
         }, "VnNativeAdmobSdk", "connect");
     }
 }
