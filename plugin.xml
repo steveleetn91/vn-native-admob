@@ -22,7 +22,7 @@
                 <source url="https://cdn.cocoapods.org/"/>
             </config>
             <pods use-frameworks="true">
-                <pod name="Google-Mobile-Ads-SDK" spec="19.2.0"/>
+                <pod name="Google-Mobile-Ads-SDK"/>
             </pods>
         </podspec>
     </platform>
