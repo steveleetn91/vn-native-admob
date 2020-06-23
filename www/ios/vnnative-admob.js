@@ -1,7 +1,6 @@
 let exec = require('cordova/exec');
 
 import { wrapCallbacks, translateOptions } from './utils'
-
 import { Banner } from './banner'
 import { Interstitial } from './interstitial'
 import { RewardVideo } from './reward-video'
