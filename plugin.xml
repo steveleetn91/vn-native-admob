@@ -6,8 +6,11 @@
     <license>Vn Native 2.0</license>
     <keywords>Vnnative, Example library</keywords>
     <platform name="ios">
-        <js-module src="www/ios/vnnative-admob.js" name="vnnativeadmob">
-            <clobbers target="vnnativeadmob" />
+        <js-module name="AdMob" src="www/ios/vnnative-admob.js">
+            <clobbers target="admob" />
+            <!-- the following export will be removed in future -->
+            <clobbers target="AdMob" />
+            <clobbers target="plugins.AdMob" />
         </js-module>
         <config-file target="config.xml" parent="/widget">
             <feature name="vnnativeadmob">
@@ -27,8 +30,11 @@
         </podspec>
     </platform>
     <platform name="android">
-        <js-module src="www/android/vnnative-admob.js" name="vnnativeadmob">
-            <clobbers target="vnnativeadmob" />
+        <js-module name="AdMob" src="www/android/vnnative-admob.js">
+            <clobbers target="admob" />
+            <!-- the following export will be removed in future -->
+            <clobbers target="AdMob" />
+            <clobbers target="plugins.AdMob" />
         </js-module>
         <config-file target="config.xml" parent="/widget">
             <feature name="VnNativeFacebookSdk">
