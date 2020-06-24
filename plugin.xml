@@ -15,7 +15,7 @@
             <feature name="VnNativeAdmobSdk">
                 <param name="ios-package" value="VnNativeAdmobSdk" />
                 <param name="onload" value="true" />
-            </feature>
+            </feature> 
         </config-file>
         <header-file src="src/ios/VnNativeAdmobSdk.h" />
         <source-file src="src/ios/VnNativeAdmobSdk.m" />
