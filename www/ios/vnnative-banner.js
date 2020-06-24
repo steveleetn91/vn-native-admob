@@ -1,5 +1,5 @@
-import { buildEvents, exec, translateOptions } from './utils'
-
+//import { buildEvents, exec, translateOptions } from './utils'
+let utils = require('utils');
 /**
  * Banner config object.
  * @typedef {BaseConfig} BannerConfig
@@ -11,7 +11,7 @@ import { buildEvents, exec, translateOptions } from './utils'
  * @property {string} [size=SMART_BANNER] - {@link BANNER_SIZE}
  */
 
-const events = buildEvents('banner', [
+const events = utils.buildEvents('banner', [
   'LOAD',
   'LOAD_FAIL',
   'OPEN',
@@ -54,25 +54,26 @@ const sizes = {
  * @desc
  * See usage in {@link banner}.
  */
-class Banner {
-  static events = events
+
+let banner = {
+  events : events,
 
   /**
    * Banner sizes
    * @type {BANNER_SIZE}
    */
-  static sizes = sizes
+  sizes : sizes,
 
   /**
    * @protected
    * @param {BannerConfig} opts - Initial config.
    */
-  constructor(opts) {
+  constructor : function(opts) {
     this.config({
       size: sizes.SMART_BANNER,
       ...opts,
     })
-  }
+  },
 
   /**
    * Update config.
@@ -80,54 +81,54 @@ class Banner {
    * @param {BannerConfig} opts - New config.
    * @returns {BannerConfig} Updated config.
    */
-  config(opts) {
+  config : function(opts) {
     this._config = {
       ...this._config,
       ...opts,
     }
     return this._config
-  }
+  },
 
   /**
    * Create banner.
    *
    * @returns {Promise} Excutaion result promise.
    */
-  prepare() {
+  prepare : function() {
     const options = {
       publisherId: this._config.id,
       ...this._config,
     }
     delete options.id
-    return exec('createBannerView', [translateOptions(options)])
-  }
+    return utils.exec('createBannerView', [utils.translateOptions(options)])
+  },
 
   /**
    * Show the banner.
    *
    * @returns {Promise} Excutaion result promise.
    */
-  show() {
-    return exec('showAd', [true])
-  }
+  show : function() {
+    return utils.exec('showAd', [true])
+  },
 
   /**
    * Hide the banner.
    *
    * @returns {Promise} Excutaion result promise.
    */
-  hide() {
-    return exec('showAd', [false])
-  }
+  hide : function() {
+    return utils.exec('showAd', [false])
+  },
 
   /**
    * Remove the banner.
    *
    * @returns {Promise} Excutaion result promise.
    */
-  remove() {
-    return exec('destroyBannerView', [])
+  remove : function() {
+    return utils.exec('destroyBannerView', [])
   }
 }
 
-export { Banner }
+module.export = banner;

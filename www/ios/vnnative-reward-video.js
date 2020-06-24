@@ -1,11 +1,12 @@
-import { buildEvents, exec, translateOptions } from './utils'
+let utils = require('utils');
+//import { buildEvents, utils.exec, translateOptions } from './utils'
 
 /**
  * Reward Video config object.
  * @typedef {BaseConfig} RewardVideoConfig
  */
 
-const events = buildEvents('rewardvideo', [
+const events = utils.buildEvents('rewardvideo', [
   'LOAD',
   'LOAD_FAIL',
   'OPEN',
@@ -19,18 +20,18 @@ const events = buildEvents('rewardvideo', [
  * See usage in {@link rewardvideo}.
  * @protected
  */
-class RewardVideo {
-  static events = events
+let rewardVideo = {
+  events : events,
 
   /**
    * @protected
    * @param {RewardVideoConfig} opts - Initial config.
    */
-  constructor(opts) {
+  constructor : function(opts) {
     this.config({
       ...opts,
     })
-  }
+  },
 
   /**
    * Update config.
@@ -38,39 +39,39 @@ class RewardVideo {
    * @param {RewardVideoConfig} opts - New config.
    * @returns {RewardVideoConfig} Updated config.
    */
-  config(opts) {
+  config : function(opts) {
     this._config = {
       ...this._config,
       ...opts,
     }
     return this._config
-  }
+  },
 
   /**
    * @returns {Promise} Excutaion result promise.
    */
-  prepare() {
+  prepare : function() {
     const options = {
       rewardVideoId: this._config.id,
       ...this._config,
     }
     delete options.id
-    return exec('createRewardVideo', [translateOptions(options)])
-  }
+    return utils.exec('createRewardVideo', [translateOptions(options)])
+  },
 
   /**
    * @returns {Promise} Excutaion result promise.
    */
-  show() {
-    return exec('showRewardVideo', [true])
-  }
+  show : function() {
+    return utils.exec('showRewardVideo', [true])
+  },
 
   /**
    * @returns {Promise} Excutaion result promise.
    */
-  isReady() {
-    return exec('isRewardVideoReady', [])
+  isReady : function() {
+    return utils.exec('isRewardVideoReady', [])
   }
 }
 
-export { RewardVideo }
+module.export = rewardVideo;

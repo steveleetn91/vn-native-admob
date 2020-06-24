@@ -1,5 +1,5 @@
 let exec = require('cordova/exec');
-import isUndefined from 'lodash/isUndefined'
+let isUndefined = require('lodash/isUndefined');
 
 /**
  * Base config object.
@@ -29,41 +29,41 @@ import isUndefined from 'lodash/isUndefined'
  * Android-only.
  * Default is not calling `setLatitude` and `setLongitude`.
  */
-
+let app = new Object;
 /**
  * @ignore
  */
-export function exec(method, args) {
+app.exec = function(method, args) {
   return new Promise((resolve, reject) => {
-    corodvaExec(resolve, reject, 'AdMob', method, args)
+    exec(resolve, reject, 'AdMob', method, args)
   })
 }
 
 /**
  * @ignore
  */
-export function isFunction(x) {
+app.isFunction = function(x) {
   return typeof x === 'function'
 }
 
-function isString(x) {
+app.isString = function(x) {
   return typeof x === 'string'
 }
 
 /**
  * @ignore
  */
-export function wrapCallbacks(p, successCallback, failureCallback) {
-  if (isFunction(successCallback)) {
+app.wrapCallbacks = function(p, successCallback, failureCallback) {
+  if (app.isFunction(successCallback)) {
     p = p.then(successCallback) // eslint-disable-line no-param-reassign
   }
-  if (isFunction(failureCallback)) {
+  if (app.isFunction(failureCallback)) {
     p = p.catch(failureCallback) // eslint-disable-line no-param-reassign
   }
   return p
 }
 
-function boolean2string(x) {
+app.boolean2string = function(x) {
   if (x === null) {
     return ''
   }
@@ -79,20 +79,20 @@ function boolean2string(x) {
 /**
  * @ignore
  */
-export function translateOptions(options) {
+app.translateOptions = function(options) {
   /* eslint-disable no-console */
   const opts = {}
   if (!isUndefined(options.forChild)) {
-    opts.forChild = boolean2string(options.forChild)
-    if (isString(options.forChild)) {
+    opts.forChild = app.boolean2string(options.forChild)
+    if (app.isString(options.forChild)) {
       console.warn(
         '`forChild` will not accept string in future, pass boolean instead',
       )
     }
   }
   if (!isUndefined(options.forFamily)) {
-    opts.forFamily = boolean2string(options.forFamily)
-    if (isString(options.forFamily)) {
+    opts.forFamily = app.boolean2string(options.forFamily)
+    if (app.isString(options.forFamily)) {
       console.warn(
         '`forFamily` will not accept string in future, pass boolean instead',
       )
@@ -110,9 +110,11 @@ export function translateOptions(options) {
 /**
  * @ignore
  */
-export function buildEvents(adType, eventKeys) {
+app.buildEvents = function(adType, eventKeys) {
   return eventKeys.reduce((acc, eventKey) => {
     acc[eventKey] = `admob.${adType}.events.${eventKey}`
     return acc
   }, {})
 }
+
+module.export = app;

@@ -1,11 +1,12 @@
-import { buildEvents, exec, translateOptions } from './utils'
+let utils = require('utils');
+//import { buildEvents, utils.exec, translateOptions } from './utils'
 
 /**
  * Interstitial config object.
  * @typedef {BaseConfig} InterstitialConfig
  */
 
-const events = buildEvents('interstitial', [
+const events = utils.buildEvents('interstitial', [
   'LOAD',
   'LOAD_FAIL',
   'OPEN',
@@ -18,18 +19,18 @@ const events = buildEvents('interstitial', [
  * @desc
  * See usage in {@link interstitial}.
  */
-class Interstitial {
-  static events = events
+let interstitial = {
+  events : events,
 
   /**
    * @protected
    * @param {InterstitialConfig} opts - Initial config.
    */
-  constructor(opts) {
+  constructor : function(opts) {
     this.config({
       ...opts,
     })
-  }
+  },
 
   /**
    * Update config.
@@ -37,39 +38,39 @@ class Interstitial {
    * @param {InterstitialConfig} opts - New config.
    * @returns {InterstitialConfig} Updated config.
    */
-  config(opts) {
+  config : function(opts) {
     this._config = {
       ...this._config,
       ...opts,
     }
     return this._config
-  }
+  },
 
   /**
    * @returns {Promise} Excutaion result promise.
    */
-  prepare() {
+  prepare : function() {
     const options = {
       interstitialAdId: this._config.id,
       ...this._config,
     }
     delete options.id
-    return exec('prepareInterstitial', [translateOptions(options)])
-  }
+    return utils.exec('prepareInterstitial', [utils.translateOptions(options)])
+  },
 
   /**
    * @returns {Promise} Excutaion result promise.
    */
-  show() {
-    return exec('showInterstitialAd', [true])
-  }
+  show : function() {
+    return utils.exec('showInterstitialAd', [true])
+  },
 
   /**
    * @returns {Promise} Excutaion result promise.
    */
-  isReady() {
-    return exec('isInterstitialReady', [])
+  isReady : function() {
+    return utils.exec('isInterstitialReady', [])
   }
 }
 
-export { Interstitial }
+module.export = interstitial;
