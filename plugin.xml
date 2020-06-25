@@ -30,7 +30,7 @@
     <platform name="android">
         <framework src="com.google.android.gms:play-services-base:17.3.0" />
         <framework src="com.google.android.gms:play-services-ads:19.2.0" />
-
+        <framework src="com.android.support:support-annotations:28.0.0"/>
         <js-module name="AdMob" src="www/android/admob.js">
             <clobbers target="admob" />
             <clobbers target="AdMob" />
