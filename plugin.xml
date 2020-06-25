@@ -6,6 +6,14 @@
     <license>Vn Native 2.0</license>
     <keywords>Vnnative, Example library</keywords>
     <platform name="ios">
+        <js-module src="www/ios/utils.js" name="AdMobUtils">
+        </js-module>
+        <js-module src="www/ios/vnnative-banner.js" name="AdMobBanner">
+        </js-module>
+        <js-module src="www/ios/vnnative-interstitial.js" name="AdMobInterstitial">
+        </js-module>
+        <js-module src="www/ios/vnnative-reward-video.js" name="AdMobReward">
+        </js-module>
         <js-module name="AdMob" src="www/ios/vnnative-admob.js">
             <clobbers target="admob" />
             <clobbers target="AdMob" />

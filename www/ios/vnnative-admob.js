@@ -1,4 +1,4 @@
-let utils = require('./utils');
+let utils = require('./utils.js');
 //import { wrapCallbacks, translateOptions } from './utils'
 let _banner = require('./vnnative-banner');
 let _interstitial = require('./interstitial');
