@@ -33,7 +33,9 @@
         <framework src="com.google.android.gms:play-services-ads:19.2.0" />
         <framework src="com.android.support:support-annotations:28.0.0"/>
         <js-module name="admob" src="www/android/admob.js">
+            <clobbers target="admob" />
             <clobbers target="AdMob" />
+            <clobbers target="plugins.AdMob" />
         </js-module>
         <config-file parent="/*" target="res/xml/config.xml">
             <feature name="AdMob">
