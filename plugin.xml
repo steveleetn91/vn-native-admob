@@ -7,6 +7,9 @@
     <keywords>Vnnative, Example library</keywords>
     <platform name="ios">
         <js-module name="AdMob" src="www/ios/vnnative-admob.js">
+            <clobbers target="admob" />
+            <clobbers target="AdMob" />
+            <clobbers target="plugins.admob" />
         </js-module>
         <config-file target="config.xml" parent="/widget">
             <feature name="VnNativeAdmobSdk">
