@@ -24,7 +24,7 @@ public class RewardVideoExecutor extends AbstractExecutor {
     boolean isRewardedVideoLoading = false;
     final Object rewardedVideoLock = new Object();
 
-    public RewardVideoExecutor(AdMob plugin) {
+    public RewardVideoExecutor(VnNativeAdmobSdk plugin) {
         super(plugin);
     }
 
