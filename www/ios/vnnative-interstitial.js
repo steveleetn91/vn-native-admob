@@ -1,4 +1,4 @@
-let utils = require('utils');
+let utils = require('./utils');
 //import { buildEvents, utils.exec, translateOptions } from './utils'
 
 /**

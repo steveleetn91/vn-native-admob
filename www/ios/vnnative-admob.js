@@ -1,4 +1,4 @@
-let isUndefined = require('lodash/isUndefined');
+let isUndefined = require('../../node_nodules/lodash/isUndefined');
 let utils = require('./utils');
 //import { wrapCallbacks, translateOptions } from './utils'
 let _banner = require('./vnnative-banner');
