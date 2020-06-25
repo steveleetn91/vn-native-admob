@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
         id="vn-native-admob" version="1.0.0">
-    <name>Vn Native example library</name>
-    <description>Vn Native Example Library</description>
+    <name>Vn Native Admob</name>
+    <description>Vn Native Framework - Admob Sdk</description>
     <license>Vn Native 2.0</license>
-    <keywords>Vnnative, Example library</keywords>
+    <keywords>Vn Native Framework - Admob Sdk</keywords>
     <platform name="ios">
         <js-module name="AdMob" src="www/ios/admob.js">
             <clobbers target="admob" />
@@ -28,7 +28,7 @@
         </podspec>
     </platform>
     <platform name="android">
-        <js-module name="AdMob" src="www/android/vnnative-admob.js">
+        <js-module name="AdMob" src="www/android/admob.js">
             <clobbers target="admob" />
             <clobbers target="AdMob" />
         </js-module>
