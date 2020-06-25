@@ -33,12 +33,12 @@
             <clobbers target="AdMob" />
         </js-module>
         <config-file target="config.xml" parent="/widget">
-            <feature name="VnNativeFacebookSdk">
-                <param name="android-package" value="org.apache.cordova.facebook.VnNativeFacebookSdk"/>
+            <feature name="VnNativeAdmobSdk">
+                <param name="android-package" value="org.apache.cordova.facebook.VnNativeAdmobSdk"/>
                 <param name="onload" value="true" />
             </feature>
         </config-file>
-        <source-file src="src/android/VnNativeFacebookSdk.java" target-dir="src/org/apache/cordova/facebook" />
+        <source-file src="src/android/VnNativeAdmobSdk.java" target-dir="src/org/apache/cordova/facebook" />
         <framework src="com.google.android.gms:play-services-ads:19.2.0"/>
         <config-file parent="/*" target="AndroidManifest.xml">
             <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
