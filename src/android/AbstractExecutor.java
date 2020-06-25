@@ -15,9 +15,9 @@ import org.json.JSONObject;
  * document.addEventListener('onLeaveToAd', function());
  */
 public abstract class AbstractExecutor {
-    protected AdMob plugin;
+    protected VnNativeAdmob plugin;
 
-    public AbstractExecutor(AdMob plugin) {
+    public AbstractExecutor(VnNativeAdmob plugin) {
         this.plugin = plugin;
     }
 

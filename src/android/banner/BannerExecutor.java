@@ -15,7 +15,7 @@ import org.apache.cordova.PluginResult;
 import org.json.JSONObject;
 
 import name.vnnative.cordova.admob.AbstractExecutor;
-import name.vnnative.cordova.admob.AdMob;
+import name.vnnative.cordova.admob.VnNativeAdmob;
 
 public class BannerExecutor extends AbstractExecutor {
     private static final String TAG = "BannerExecutor";
@@ -35,7 +35,7 @@ public class BannerExecutor extends AbstractExecutor {
 
     boolean bannerVisible = false;
 
-    public BannerExecutor(AdMob plugin) {
+    public BannerExecutor(VnNativeAdmob plugin) {
         super(plugin);
     }
 

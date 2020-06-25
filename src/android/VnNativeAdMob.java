@@ -33,11 +33,11 @@ import name.vnnative.cordova.admob.rewardvideo.RewardVideoExecutor;
  * This plugin can be used to request AdMob ads natively via the Google AdMob SDK.
  * The Google AdMob SDK is a dependency for this plugin.
  */ 
-public class AdMob extends CordovaPlugin {
+public class VnNativeAdmob extends CordovaPlugin {
     /**
      * Common tag used for logging statements.
      */
-    private static final String TAG = "AdMob";
+    private static final String TAG = "VnNativeAdmob";
 
     public final AdMobConfig config = new AdMobConfig();
 
