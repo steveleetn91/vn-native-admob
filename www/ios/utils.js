@@ -1,5 +1,4 @@
 let exec = require('cordova/exec');
-let isUndefined = require('../../node_modules/lodash/isUndefined');
 
 /**
  * Base config object.
@@ -82,7 +81,7 @@ app.boolean2string = function(x) {
 app.translateOptions = function(options) {
   /* eslint-disable no-console */
   const opts = {}
-  if (!isUndefined(options.forChild)) {
+  if (options.forChild) {
     opts.forChild = app.boolean2string(options.forChild)
     if (app.isString(options.forChild)) {
       console.warn(
@@ -90,7 +89,7 @@ app.translateOptions = function(options) {
       )
     }
   }
-  if (!isUndefined(options.forFamily)) {
+  if (options.forChild) {
     opts.forFamily = app.boolean2string(options.forFamily)
     if (app.isString(options.forFamily)) {
       console.warn(

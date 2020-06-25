@@ -1,4 +1,4 @@
-//import { buildEvents, exec, translateOptions } from './utils'
+
 let utils = require('./utils');
 /**
  * Banner config object.
