@@ -135,7 +135,7 @@ const events_banner = utils.buildEvents('banner', [
   'LOAD_FAIL',
   'OPEN',
   'CLOSE',
-  'EXIT_APP',
+  'EXIT_admob',
 ])
 
 /**
@@ -260,7 +260,7 @@ const events_interstitial = utils.buildEvents('interstitial', [
   'LOAD_FAIL',
   'OPEN',
   'CLOSE',
-  'EXIT_APP',
+  'EXIT_admob',
 ])
 
 /**
@@ -332,7 +332,7 @@ const events_rewardvideo = utils.buildEvents('rewardvideo', [
   'LOAD_FAIL',
   'OPEN',
   'CLOSE',
-  'EXIT_APP',
+  'EXIT_admob',
   'START',
   'REWARD',
 ])
@@ -402,10 +402,10 @@ let _rewardVideo = {
  * @emits {admob.banner.events.LOAD_FAIL}
  * @emits {admob.banner.events.OPEN}
  * @emits {admob.banner.events.CLOSE}
- * @emits {admob.banner.events.EXIT_APP}
+ * @emits {admob.banner.events.EXIT_admob}
  * @example 
  * admob.banner.config({
- *  id: 'ca-app-pub-xxx/xxx',
+ *  id: 'ca-admob-pub-xxx/xxx',
  * })
  *
  * // Create banner
@@ -420,8 +420,8 @@ let _rewardVideo = {
  * // Remove the banner
  * admob.banner.remove()
  */
-let app = new Object;
-app.banner = _banner;
+let admob = new Object;
+admob.banner = _banner;
 
 /**
  * @type {Interstitial}
@@ -430,17 +430,17 @@ app.banner = _banner;
  * @emits {admob.interstitial.events.LOAD_FAIL}
  * @emits {admob.interstitial.events.OPEN}
  * @emits {admob.interstitial.events.CLOSE}
- * @emits {admob.interstitial.events.EXIT_APP}
+ * @emits {admob.interstitial.events.EXIT_admob}
  * @example
  * admob.interstitial.config({
- *  id: 'ca-app-pub-xxx/xxx',
+ *  id: 'ca-admob-pub-xxx/xxx',
  * })
  *
  * admob.interstitial.prepare()
  *
  * admob.interstitial.show()
  */
-app.interstitial = _interstitial;
+admob.interstitial = _interstitial;
 
 /**
  * @external {cordova-admob-mediation} https://github.com/rehy/cordova-admob-mediation
@@ -454,19 +454,19 @@ app.interstitial = _interstitial;
  * @emits {admob.rewardvideo.events.LOAD_FAIL}
  * @emits {admob.rewardvideo.events.OPEN}
  * @emits {admob.rewardvideo.events.CLOSE}
- * @emits {admob.rewardvideo.events.EXIT_APP}
+ * @emits {admob.rewardvideo.events.EXIT_admob}
  * @emits {admob.rewardvideo.events.START}
  * @emits {admob.rewardvideo.events.REWARD}
  * @example
  * admob.rewardvideo.config({
- *  id: 'ca-app-pub-xxx/xxx',
+ *  id: 'ca-admob-pub-xxx/xxx',
  * })
  *
  * admob.rewardvideo.prepare()
  *
  * admob.rewardvideo.show()
  */
-app.rewardvideo = _rewardVideo;
+admob.rewardvideo = _rewardVideo;
 
 // Old APIs
 
@@ -504,29 +504,29 @@ app.rewardvideo = _rewardVideo;
  */
 
 
-app.setOptions = function(options, successCallback, failureCallback) {
+admob.setOptions = function(options, successCallback, failureCallback) {
   if (typeof options === 'object') {
     Object.keys(options).forEach(k => {
       switch (k) {
         case 'publisherId':
-          app.banner._config.id = options[k]
+          admob.banner._config.id = options[k]
           break
         case 'bannerAtTop':
         case 'overlap':
         case 'offsetTopBar':
-          app.banner._config[k] = options[k]
+          admob.banner._config[k] = options[k]
           break
         case 'interstitialAdId':
-          app.interstitial._config.id = options[k]
+          admob.interstitial._config.id = options[k]
           break
         case 'rewardVideoId':
-          app.rewardvideo._config.id = options[k]
+          admob.rewardvideo._config.id = options[k]
           break
         case 'isTesting':
         case 'autoShow':
-          app.banner._config[k] = options[k]
-          app.interstitial._config[k] = options[k]
-          app.rewardvideo._config[k] = options[k]
+          admob.banner._config[k] = options[k]
+          admob.interstitial._config[k] = options[k]
+          admob.rewardvideo._config[k] = options[k]
           break
         default:
       }
@@ -545,13 +545,13 @@ app.setOptions = function(options, successCallback, failureCallback) {
  * @type {BANNER_SIZE}
  * @deprecated since version 0.6
  */
-app.AD_SIZE = _banner.sizes
+admob.AD_SIZE = _banner.sizes
 
 /* eslint-disable no-console */
 /**
  * @deprecated since version 0.6
  */
-app.createBannerView = function(
+admob.createBannerView = function(
   options = {},
   successCallback,
   failureCallback,
@@ -565,7 +565,7 @@ app.createBannerView = function(
 /**
  * @deprecated since version 0.6
  */
-app.destroyBannerView = function(options, successCallback, failureCallback) {
+admob.destroyBannerView = function(options, successCallback, failureCallback) {
   console.warn('Use admob.banner.remove() instead.')
   exec(successCallback, failureCallback, 'AdMob', 'destroyBannerView', [])
 }
@@ -573,7 +573,7 @@ app.destroyBannerView = function(options, successCallback, failureCallback) {
 /**
  * @deprecated since version 0.6
  */
-app.showAd = function(show = true, successCallback, failureCallback) {
+admob.showAd = function(show = true, successCallback, failureCallback) {
   console.warn('Use admob.banner.show() and admob.banner.hide() instead.')
   exec(successCallback, failureCallback, 'AdMob', 'showAd', [show])
 }
@@ -581,7 +581,7 @@ app.showAd = function(show = true, successCallback, failureCallback) {
 /**
  * @deprecated since version 0.6
  */
-app.createInterstitialView = function(
+admob.createInterstitialView = function(
   options,
   successCallback,
   failureCallback,
@@ -597,7 +597,7 @@ app.createInterstitialView = function(
 /**
  * @deprecated since version 0.6
  */
-app.requestInterstitialAd = function(
+admob.requestInterstitialAd = function(
   options = {},
   successCallback,
   failureCallback,
@@ -613,7 +613,7 @@ app.requestInterstitialAd = function(
 /**
  * @deprecated since version 0.6
  */
-app.prepareInterstitial = function(
+admob.prepareInterstitial = function(
   options = {},
   successCallback,
   failureCallback,
@@ -627,7 +627,7 @@ app.prepareInterstitial = function(
 /**
  * @deprecated since version 0.6
  */
-app.showInterstitial = function(successCallback, failureCallback) {
+admob.showInterstitial = function(successCallback, failureCallback) {
   console.warn('Use admob.interstitial.show() instead.')
   utils.wrapCallbacks(interstitial.show(), successCallback, failureCallback)
 }
@@ -635,7 +635,7 @@ app.showInterstitial = function(successCallback, failureCallback) {
 /**
  * @deprecated since version 0.6
  */
-app.showInterstitialAd = function(
+admob.showInterstitialAd = function(
   show = true,
   successCallback,
   failureCallback,
@@ -645,4 +645,4 @@ app.showInterstitialAd = function(
 }
 /* eslint-enable no-console */
 
-module.exports = app;
+module.exports = admob;

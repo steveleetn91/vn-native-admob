@@ -9,7 +9,6 @@
         <js-module name="AdMob" src="www/ios/admob.js">
             <clobbers target="admob" />
             <clobbers target="AdMob" />
-            <clobbers target="plugins.admob" />
         </js-module>
         <config-file target="config.xml" parent="/widget">
             <feature name="VnNativeAdmobSdk">
