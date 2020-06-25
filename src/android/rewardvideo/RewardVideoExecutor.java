@@ -14,7 +14,7 @@ import org.apache.cordova.PluginResult;
 import org.json.JSONObject;
 
 import name.vnnative.cordova.admob.AbstractExecutor;
-import name.vnnative.cordova.admob.VnNativeAdmob;
+import name.vnnative.cordova.admob.VnNativeAdMob;
 
 public class RewardVideoExecutor extends AbstractExecutor {
     /**
@@ -24,7 +24,7 @@ public class RewardVideoExecutor extends AbstractExecutor {
     boolean isRewardedVideoLoading = false;
     final Object rewardedVideoLock = new Object();
 
-    public RewardVideoExecutor(VnNativeAdmob plugin) {
+    public RewardVideoExecutor(VnNativeAdMob plugin) {
         super(plugin);
     }
 

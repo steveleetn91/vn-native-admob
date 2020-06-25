@@ -219,7 +219,7 @@ public class AdMobConfig {
     public String getBannerAdUnitId() {
         if (isEmptyAdUnitId(bannerAdUnitId)) {
             // in case the user does not enter their own publisher id
-            Log.e("banner", "Please put your VnNativeAdmob id into the javascript code. Test ad is used.");
+            Log.e("banner", "Please put your VnNativeAdMob id into the javascript code. Test ad is used.");
             return TEST_BANNER_ID;
         }
         return bannerAdUnitId;
@@ -228,7 +228,7 @@ public class AdMobConfig {
     public String getInterstitialAdUnitId() {
         if (isEmptyAdUnitId(interstitialAdUnitId)) {
             // in case the user does not enter their own publisher id
-            Log.e("interstitial", "Please put your VnNativeAdmob id into the javascript code. Test ad is used.");
+            Log.e("interstitial", "Please put your VnNativeAdMob id into the javascript code. Test ad is used.");
             return TEST_INTERSTITIAL_ID;
         }
         return interstitialAdUnitId;
@@ -237,7 +237,7 @@ public class AdMobConfig {
     public String getRewardedVideoAdUnitId() {
         if (isEmptyAdUnitId(rewardVideoId)) {
             // in case the user does not enter their own publisher id
-            Log.e("rewardedvideo", "Please put your VnNativeAdmob id into the javascript code. Test ad is used.");
+            Log.e("rewardedvideo", "Please put your VnNativeAdMob id into the javascript code. Test ad is used.");
             return TEST_REWARDED_VIDEO_ID;
         }
         return rewardVideoId;

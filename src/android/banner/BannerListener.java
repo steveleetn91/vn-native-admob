@@ -45,7 +45,7 @@ class BannerListener extends AdListener {
 
     @Override
     public void onAdLoaded() {
-        Log.w("VnNativeAdmob", "BannerAdLoaded");
+        Log.w("VnNativeAdMob", "BannerAdLoaded");
         if (executor.shouldAutoShow() && !executor.bannerVisible) {
             executor.showAd(true, null);
         }
