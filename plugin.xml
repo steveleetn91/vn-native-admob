@@ -29,9 +29,19 @@
     </platform>
     <platform name="android">
         <preference name="ADMOB_APP_ID" default=""/>
-        <framework src="com.google.android.gms:play-services-base:17.3.0" />
-        <framework src="com.google.android.gms:play-services-ads:19.2.0" />
-        <framework src="com.android.support:support-annotations:28.0.0"/>
+
+        <config-file parent="/manifest/application" target="AndroidManifest.xml">
+            <activity android:name="com.google.android.gms.ads.AdActivity"
+                android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+                android:theme="@android:style/Theme.Translucent" />
+            <meta-data
+                android:name="com.google.android.gms.ads.APPLICATION_ID"
+                android:value="$ADMOB_APP_ID"/>
+        </config-file>
+        <config-file parent="/*" target="AndroidManifest.xml">
+            <uses-permission android:name="android.permission.INTERNET" />
+            <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+        </config-file>
         <js-module name="admob" src="www/android/admob.js">
             <clobbers target="admob" />
             <clobbers target="AdMob" />
