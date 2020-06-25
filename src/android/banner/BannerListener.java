@@ -1,4 +1,4 @@
-package name.vnnative.cordova.admob.banner;
+package name.ratson.cordova.admob.banner;
 
 import android.util.Log;
 
@@ -7,7 +7,7 @@ import com.google.android.gms.ads.AdListener;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import name.vnnative.cordova.admob.AbstractExecutor;
+import name.ratson.cordova.admob.AbstractExecutor;
 
 class BannerListener extends AdListener {
     private final BannerExecutor executor;

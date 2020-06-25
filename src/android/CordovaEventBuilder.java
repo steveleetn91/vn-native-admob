@@ -1,4 +1,4 @@
-package name.vnnative.cordova.admob;
+package name.ratson.cordova.admob;
 
 import org.json.JSONObject;
 

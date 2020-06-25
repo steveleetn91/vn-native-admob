@@ -1,4 +1,4 @@
-package name.vnnative.cordova.admob.rewardvideo;
+package name.ratson.cordova.admob.rewardvideo;
 
 import android.util.Log;
 
@@ -8,7 +8,7 @@ import com.google.android.gms.ads.reward.RewardedVideoAdListener;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import name.vnnative.cordova.admob.AbstractExecutor;
+import name.ratson.cordova.admob.AbstractExecutor;
 
 class RewardVideoListener implements RewardedVideoAdListener {
     private final RewardVideoExecutor executor;
