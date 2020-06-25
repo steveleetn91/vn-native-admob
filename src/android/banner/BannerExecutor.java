@@ -1,4 +1,4 @@
-package name.vnnative.cordova.admob.banner;
+package org.apache.cordova.plugin.banner;
 
 import android.util.Log;
 import android.view.View;
@@ -14,8 +14,8 @@ import org.apache.cordova.CordovaWebView;
 import org.apache.cordova.PluginResult;
 import org.json.JSONObject;
 
-import name.vnnative.cordova.admob.AbstractExecutor;
-import name.vnnative.cordova.admob.AdMob;
+import org.apache.cordova.plugin.AbstractExecutor;
+import org.apache.cordova.plugin.AdMob;
 
 public class BannerExecutor extends AbstractExecutor {
     private static final String TAG = "BannerExecutor";

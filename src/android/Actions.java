@@ -1,4 +1,4 @@
-package name.vnnative.cordova.admob;
+package org.apache.cordova.plugin;
 
 /**
  * Cordova Actions.

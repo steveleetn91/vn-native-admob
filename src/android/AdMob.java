@@ -1,4 +1,4 @@
-package name.vnnative.cordova.admob;
+package org.apache.cordova.plugin;
 
 import android.os.Bundle;
 import android.provider.Settings;
@@ -24,9 +24,9 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Iterator;
 
-import name.vnnative.cordova.admob.banner.BannerExecutor;
-import name.vnnative.cordova.admob.interstitial.InterstitialExecutor;
-import name.vnnative.cordova.admob.rewardvideo.RewardVideoExecutor;
+import org.apache.cordova.plugin.banner.BannerExecutor;
+import org.apache.cordova.plugin.interstitial.InterstitialExecutor;
+import org.apache.cordova.plugin.rewardvideo.RewardVideoExecutor;
 
 /**
  * This class represents the native implementation for the AdMob Cordova plugin.

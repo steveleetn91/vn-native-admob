@@ -1,4 +1,4 @@
-package name.vnnative.cordova.admob.interstitial;
+package org.apache.cordova.plugin.interstitial;
 
 import android.util.Log;
 
@@ -7,7 +7,7 @@ import com.google.android.gms.ads.AdListener;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import name.vnnative.cordova.admob.AbstractExecutor;
+import org.apache.cordova.plugin.AbstractExecutor;
 
 class InterstitialListener extends AdListener {
     private final InterstitialExecutor executor;

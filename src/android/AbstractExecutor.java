@@ -1,4 +1,4 @@
-package name.vnnative.cordova.admob;
+package org.apache.cordova.plugin;
 
 import com.google.android.gms.ads.AdRequest;
 

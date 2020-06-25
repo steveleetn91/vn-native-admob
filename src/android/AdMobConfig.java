@@ -1,4 +1,4 @@
-package name.vnnative.cordova.admob;
+package org.apache.cordova.plugin;
 
 import android.location.Location;
 import android.util.Log;
