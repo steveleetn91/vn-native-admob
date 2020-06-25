@@ -35,7 +35,7 @@ let utils = new Object;
  */
 utils.exec = function(method, args) {
   return new Promise((resolve, reject) => {
-    exec(resolve, reject, 'AdMobSdk', method, args)
+    exec(resolve, reject, 'AdMod', method, args)
   })
 }
 
@@ -531,7 +531,7 @@ admob.setOptions = function(options, successCallback, failureCallback) {
         default:
       }
     })
-    exec(successCallback, failureCallback, 'AdMobSdk', 'setOptions', [
+    exec(successCallback, failureCallback, 'AdMod', 'setOptions', [
       utils.translateOptions(options),
     ])
   } else if (typeof failureCallback === 'function') {
@@ -557,7 +557,7 @@ admob.createBannerView = function(
   failureCallback,
 ) {
   console.warn('Use admob.banner.prepare() instead.')
-  exec(successCallback, failureCallback, 'AdMobSdk', 'createBannerView', [
+  exec(successCallback, failureCallback, 'AdMod', 'createBannerView', [
     utils.translateOptions(options),
   ])
 }
@@ -567,7 +567,7 @@ admob.createBannerView = function(
  */
 admob.destroyBannerView = function(options, successCallback, failureCallback) {
   console.warn('Use admob.banner.remove() instead.')
-  exec(successCallback, failureCallback, 'AdMobSdk', 'destroyBannerView', [])
+  exec(successCallback, failureCallback, 'AdMod', 'destroyBannerView', [])
 }
 
 /**
@@ -575,7 +575,7 @@ admob.destroyBannerView = function(options, successCallback, failureCallback) {
  */
 admob.showAd = function(show = true, successCallback, failureCallback) {
   console.warn('Use admob.banner.show() and admob.banner.hide() instead.')
-  exec(successCallback, failureCallback, 'AdMobSdk', 'showAd', [show])
+  exec(successCallback, failureCallback, 'AdMod', 'showAd', [show])
 }
 
 /**
@@ -589,7 +589,7 @@ admob.createInterstitialView = function(
   console.warn(
     'Use admob.interstitial.prepare() instead, it will do both createInterstitialView() and requestInterstitialAd().',
   )
-  exec(successCallback, failureCallback, 'AdMobSdk', 'createInterstitialView', [
+  exec(successCallback, failureCallback, 'AdMod', 'createInterstitialView', [
     utils.translateOptions(options),
   ])
 }
@@ -605,7 +605,7 @@ admob.requestInterstitialAd = function(
   console.warn(
     'Use admob.interstitial.prepare() instead, it will do both createInterstitialView() and requestInterstitialAd().',
   )
-  exec(successCallback, failureCallback, 'AdMobSdk', 'requestInterstitialAd', [
+  exec(successCallback, failureCallback, 'AdMod', 'requestInterstitialAd', [
     utils.translateOptions(options),
   ])
 }
@@ -619,7 +619,7 @@ admob.prepareInterstitial = function(
   failureCallback,
 ) {
   console.warn('Use admob.interstitial.prepare() instead.')
-  exec(successCallback, failureCallback, 'AdMobSdk', 'prepareInterstitial', [
+  exec(successCallback, failureCallback, 'AdMod', 'prepareInterstitial', [
     utils.translateOptions(options),
   ])
 }
@@ -641,7 +641,7 @@ admob.showInterstitialAd = function(
   failureCallback,
 ) {
   console.warn('Use admob.interstitial.show() instead.')
-  exec(successCallback, failureCallback, 'AdMobSdk', 'showInterstitialAd', [show])
+  exec(successCallback, failureCallback, 'AdMod', 'showInterstitialAd', [show])
 }
 /* eslint-enable no-console */
 
