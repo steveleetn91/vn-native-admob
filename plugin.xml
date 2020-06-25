@@ -59,7 +59,7 @@
 
         <source-file src="src/android/AbstractExecutor.java" target-dir="src/name/vnnative/cordova/admob" />
         <source-file src="src/android/Actions.java" target-dir="src/name/vnnative/cordova/admob" />
-        <source-file src="src/android/AdMob.java" target-dir="src/name/vnnative/cordova/admob" />
+        <source-file src="src/android/VnNativeAdmobSdk.java" target-dir="src/name/vnnative/cordova/admob" />
         <source-file src="src/android/AdMobConfig.java" target-dir="src/name/vnnative/cordova/admob" />
         <source-file src="src/android/CordovaEventBuilder.java" target-dir="src/name/vnnative/cordova/admob" />
     </platform>
