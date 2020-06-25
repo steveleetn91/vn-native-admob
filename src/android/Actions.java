@@ -1,4 +1,4 @@
-package name.ratson.cordova.admob;
+package name.vnnative.cordova.admob;
 
 /**
  * Cordova Actions.
