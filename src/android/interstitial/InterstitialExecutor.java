@@ -10,7 +10,7 @@ import org.apache.cordova.PluginResult;
 import org.json.JSONObject;
 
 import name.vnnative.cordova.admob.AbstractExecutor;
-import name.vnnative.cordova.admob.VnNativeAdmobSdk;
+import name.vnnative.cordova.admob.AdMob;
 import name.vnnative.cordova.admob.AdMobConfig;
 
 public class InterstitialExecutor extends AbstractExecutor {
@@ -19,7 +19,7 @@ public class InterstitialExecutor extends AbstractExecutor {
      */
     private InterstitialAd interstitialAd;
 
-    public InterstitialExecutor(VnNativeAdmobSdk plugin) {
+    public InterstitialExecutor(AdMob plugin) {
         super(plugin);
     }
 

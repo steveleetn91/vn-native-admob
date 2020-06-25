@@ -1,11 +1,11 @@
-package name.vnnative.cordova.VnNativeAdmobSdk;
+package name.vnnative.cordova.admob;
 
 import com.google.android.gms.ads.AdRequest;
 
 import org.json.JSONObject;
 
 /**
- * This class implements the VnNativeAdmobSdk ad listener events.  It forwards the events
+ * This class implements the AdMob ad listener events.  It forwards the events
  * to the JavaScript layer.  To listen for these events, use:
  * <p>
  * document.addEventListener('onReceiveAd', function());
@@ -15,9 +15,9 @@ import org.json.JSONObject;
  * document.addEventListener('onLeaveToAd', function());
  */
 public abstract class AbstractExecutor {
-    protected VnNativeAdmobSdk plugin;
+    protected AdMob plugin;
 
-    public AbstractExecutor(VnNativeAdmobSdk plugin) {
+    public AbstractExecutor(AdMob plugin) {
         this.plugin = plugin;
     }
 
