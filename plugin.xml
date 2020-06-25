@@ -11,13 +11,13 @@
             <clobbers target="AdMob" />
         </js-module>
         <config-file target="config.xml" parent="/widget">
-            <feature name="AdMobSdk">
-                <param name="ios-package" value="AdMobSdk" />
+            <feature name="VnNativeAdmobSdk">
+                <param name="ios-package" value="VnNativeAdmobSdk" />
                 <param name="onload" value="true" />
             </feature> 
         </config-file>
-        <header-file src="src/ios/AdMobSdk.h" />
-        <source-file src="src/ios/AdMobSdk.m" />
+        <header-file src="src/ios/VnNativeAdmobSdk.h" />
+        <source-file src="src/ios/VnNativeAdmobSdk.m" />
         <podspec>
             <config>
                 <source url="https://cdn.cocoapods.org/"/>

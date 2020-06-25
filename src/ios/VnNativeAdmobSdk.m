@@ -25,7 +25,7 @@
 
 @end
 
-@implementation AdMobSdk
+@implementation VnNativeAdmobSdk
 
 @synthesize bannerView = bannerView_;
 @synthesize interstitialView = interstitialView_;
