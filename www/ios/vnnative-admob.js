@@ -545,7 +545,7 @@ app.setOptions = function(options, successCallback, failureCallback) {
  * @type {BANNER_SIZE}
  * @deprecated since version 0.6
  */
-app.AD_SIZE = Banner.sizes
+app.AD_SIZE = _banner.sizes
 
 /* eslint-disable no-console */
 /**
