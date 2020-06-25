@@ -74,4 +74,4 @@ let rewardVideo = {
   }
 }
 
-module.export = rewardVideo;
+module.exports = rewardVideo;

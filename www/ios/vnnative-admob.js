@@ -254,4 +254,4 @@ app.showInterstitialAd = function(
 }
 /* eslint-enable no-console */
 
-module.export = app;
+module.exports = app;

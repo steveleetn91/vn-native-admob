@@ -73,4 +73,4 @@ let interstitial = {
   }
 }
 
-module.export = interstitial;
+module.exports = interstitial;

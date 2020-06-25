@@ -116,4 +116,4 @@ app.buildEvents = function(adType, eventKeys) {
   }, {})
 }
 
-module.export = app;
+module.exports = app;
