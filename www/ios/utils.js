@@ -1,5 +1,5 @@
 let exec = require('cordova/exec');
-let isUndefined = require('lodash/isUndefined');
+let isUndefined = require('../../node_nodules/lodash/isUndefined');
 
 /**
  * Base config object.
