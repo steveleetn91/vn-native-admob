@@ -139,7 +139,7 @@ export function setOptions(options, successCallback, failureCallback) {
         default:
       }
     })
-    exec(successCallback, failureCallback, 'VnNativeAdmob', 'setOptions', [
+    exec(successCallback, failureCallback, 'AdMob', 'setOptions', [
       translateOptions(options),
     ])
   } else if (typeof failureCallback === 'function') {
@@ -165,7 +165,7 @@ export function createBannerView(
   failureCallback,
 ) {
   console.warn('Use admob.banner.prepare() instead.')
-  exec(successCallback, failureCallback, 'VnNativeAdmob', 'createBannerView', [
+  exec(successCallback, failureCallback, 'AdMob', 'createBannerView', [
     translateOptions(options),
   ])
 }
@@ -175,7 +175,7 @@ export function createBannerView(
  */
 export function destroyBannerView(options, successCallback, failureCallback) {
   console.warn('Use admob.banner.remove() instead.')
-  exec(successCallback, failureCallback, 'VnNativeAdmob', 'destroyBannerView', [])
+  exec(successCallback, failureCallback, 'AdMob', 'destroyBannerView', [])
 }
 
 /**
@@ -183,7 +183,7 @@ export function destroyBannerView(options, successCallback, failureCallback) {
  */
 export function showAd(show = true, successCallback, failureCallback) {
   console.warn('Use admob.banner.show() and admob.banner.hide() instead.')
-  exec(successCallback, failureCallback, 'VnNativeAdmob', 'showAd', [show])
+  exec(successCallback, failureCallback, 'AdMob', 'showAd', [show])
 }
 
 /**
@@ -197,7 +197,7 @@ export function createInterstitialView(
   console.warn(
     'Use admob.interstitial.prepare() instead, it will do both createInterstitialView() and requestInterstitialAd().',
   )
-  exec(successCallback, failureCallback, 'VnNativeAdmob', 'createInterstitialView', [
+  exec(successCallback, failureCallback, 'AdMob', 'createInterstitialView', [
     translateOptions(options),
   ])
 }
@@ -213,7 +213,7 @@ export function requestInterstitialAd(
   console.warn(
     'Use admob.interstitial.prepare() instead, it will do both createInterstitialView() and requestInterstitialAd().',
   )
-  exec(successCallback, failureCallback, 'VnNativeAdmob', 'requestInterstitialAd', [
+  exec(successCallback, failureCallback, 'AdMob', 'requestInterstitialAd', [
     translateOptions(options),
   ])
 }
@@ -227,7 +227,7 @@ export function prepareInterstitial(
   failureCallback,
 ) {
   console.warn('Use admob.interstitial.prepare() instead.')
-  exec(successCallback, failureCallback, 'VnNativeAdmob', 'prepareInterstitial', [
+  exec(successCallback, failureCallback, 'AdMob', 'prepareInterstitial', [
     translateOptions(options),
   ])
 }
@@ -249,6 +249,6 @@ export function showInterstitialAd(
   failureCallback,
 ) {
   console.warn('Use admob.interstitial.show() instead.')
-  exec(successCallback, failureCallback, 'VnNativeAdmob', 'showInterstitialAd', [show])
+  exec(successCallback, failureCallback, 'AdMob', 'showInterstitialAd', [show])
 }
 /* eslint-enable no-console */

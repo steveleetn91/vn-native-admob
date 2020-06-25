@@ -50,7 +50,7 @@ class RewardVideoListener implements RewardedVideoAdListener {
         synchronized (executor.rewardedVideoLock) {
             executor.isRewardedVideoLoading = false;
         }
-        Log.w("VnNativeAdMob", "RewardedVideoAdLoaded");
+        Log.w("AdMob", "RewardedVideoAdLoaded");
         executor.fireAdEvent("admob.rewardvideo.events.LOAD");
 
         if (executor.shouldAutoShow()) {

@@ -1,11 +1,11 @@
 #import <AdSupport/ASIdentifierManager.h>
 #import <CommonCrypto/CommonDigest.h>
 
-#import "VnNativeAdmobSdk.h"
+#import "AdMobSdk.h"
 
 #import <GoogleMobileAds/GADExtras.h>
 
-@interface VnNativeAdmobSdk()
+@interface AdMobSdk()
 
 - (void) __setOptions:(NSDictionary*) options;
 - (void) __createBanner;
@@ -25,7 +25,7 @@
 
 @end
 
-@implementation VnNativeAdmobSdk
+@implementation AdMobSdk
 
 @synthesize bannerView = bannerView_;
 @synthesize interstitialView = interstitialView_;

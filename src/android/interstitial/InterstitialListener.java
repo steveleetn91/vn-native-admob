@@ -44,7 +44,7 @@ class InterstitialListener extends AdListener {
 
     @Override
     public void onAdLoaded() {
-        Log.w("VnNativeAdMob", "InterstitialAdLoaded");
+        Log.w("AdMob", "InterstitialAdLoaded");
         executor.fireAdEvent("admob.interstitial.events.LOAD");
         executor.fireAdEvent("onReceiveInterstitialAd");
 
