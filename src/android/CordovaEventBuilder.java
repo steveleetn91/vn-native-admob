@@ -1,4 +1,4 @@
-package org.apache.cordova.plugin;
+package name.ratson.cordova.admob;
 
 import org.json.JSONObject;
 

@@ -28,6 +28,11 @@
         </podspec> 
     </platform>
     <platform name="android">
+        <js-module name="AdMob" src="www/android/admob.js">
+            <clobbers target="admob" />
+            <clobbers target="AdMob" />
+        </js-module>
+
         <preference name="ADMOB_APP_ID" default=""/>
 
         <config-file parent="/manifest/application" target="AndroidManifest.xml">
@@ -42,32 +47,27 @@
             <uses-permission android:name="android.permission.INTERNET" />
             <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
         </config-file>
-        <js-module name="admob" src="www/android/admob.js">
-            <clobbers target="admob" />
-        </js-module>
         <config-file parent="/*" target="res/xml/config.xml">
             <feature name="AdMob">
-                <param name="android-package" value="org.apache.cordova.plugin.AdMob" />
+                <param name="android-package" value="name.ratson.cordova.admob.AdMob" />
                 <param name="onload" value="true" />
             </feature>
         </config-file>
-        <config-file parent="/*" target="AndroidManifest.xml">
-            <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-        </config-file>
 
-        <source-file src="src/android/banner/BannerExecutor.java" target-dir="src/org/apache/cordova/plugin/admob/banner" />
-        <source-file src="src/android/banner/BannerListener.java" target-dir="src/org/apache/cordova/plugin/admob/banner" />
-        <source-file src="src/android/interstitial/InterstitialExecutor.java" target-dir="src/org/apache/cordova/plugin/admob/interstitial" />
-        <source-file src="src/android/interstitial/InterstitialListener.java" target-dir="src/org/apache/cordova/plugin/admob/interstitial" />
-        <source-file src="src/android/rewardvideo/RewardVideoExecutor.java" target-dir="src/org/apache/cordova/plugin/admob/rewardvideo" />
-        <source-file src="src/android/rewardvideo/RewardVideoListener.java" target-dir="src/org/apache/cordova/plugin/admob/rewardvideo" />
+        <source-file src="src/android/banner/BannerExecutor.java" target-dir="src/name/ratson/cordova/admob/banner" />
+        <source-file src="src/android/banner/BannerListener.java" target-dir="src/name/ratson/cordova/admob/banner" />
+        <source-file src="src/android/interstitial/InterstitialExecutor.java" target-dir="src/name/ratson/cordova/admob/interstitial" />
+        <source-file src="src/android/interstitial/InterstitialListener.java" target-dir="src/name/ratson/cordova/admob/interstitial" />
+        <source-file src="src/android/rewardvideo/RewardVideoExecutor.java" target-dir="src/name/ratson/cordova/admob/rewardvideo" />
+        <source-file src="src/android/rewardvideo/RewardVideoListener.java" target-dir="src/name/ratson/cordova/admob/rewardvideo" />
 
-        <source-file src="src/android/AbstractExecutor.java" target-dir="src/org/apache/cordova/plugin/admob" />
-        <source-file src="src/android/Actions.java" target-dir="src/org/apache/cordova/plugin/admob" />
-        <source-file src="src/android/AdMob.java" target-dir="src/org/apache/cordova/plugin/admob" />
-        <source-file src="src/android/AdMobConfig.java" target-dir="src/org/apache/cordova/plugin/admob" />
-        <source-file src="src/android/CordovaEventBuilder.java" target-dir="src/org/apache/cordova/plugin/admob" />
+        <source-file src="src/android/AbstractExecutor.java" target-dir="src/name/ratson/cordova/admob" />
+        <source-file src="src/android/Actions.java" target-dir="src/name/ratson/cordova/admob" />
+        <source-file src="src/android/AdMob.java" target-dir="src/name/ratson/cordova/admob" />
+        <source-file src="src/android/AdMobConfig.java" target-dir="src/name/ratson/cordova/admob" />
+        <source-file src="src/android/CordovaEventBuilder.java" target-dir="src/name/ratson/cordova/admob" />
     </platform>
+
     <platform name="browser">
         <js-module src="www/browser/vnnative-admob.js" name="AdMob">
             <clobbers target="AdMob" />
